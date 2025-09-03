@@ -1,0 +1,87 @@
+/* Navbar container */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #F84565;
+  --color-primary-dull: #D63854;
+}
+
+*{
+  font-family: "Outfit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #787777 fff;
+}
+
+body{
+  color: white;
+  background-color: #fff;
+}
+
+.no-scrollbar{
+  scrollbar-width: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter : invert(1);
+}
+
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar links */
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+
+.nav-link:hover {
+  color: #ff5757;
+  transform: scale(1.05);
+}
+
+/* Active link (optional if using NavLink) */
+.nav-link.active {
+  border-bottom: 2px solid #ffdd57;
+}
+
+
+/* Input fields */
+input,
+textarea,
+select {
+  color: #000;              /* text inside input visible */
+  background-color: #fff;   /* white background for contrast */
+  border: 1px solid #ccc;   /* optional border */
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2193b0;     /* focus border color */
+  box-shadow: 0 0 4px rgba(33, 147, 176, 0.5);
+}
+
+
+
