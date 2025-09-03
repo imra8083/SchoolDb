@@ -26,7 +26,7 @@ app.use(
   cors({
      origin: [
     "http://localhost:5173", // local
-    "https://school-db-utu4.vercel.app" // deployed frontend
+    "https://school-db-utu4.vercel.app/" // deployed frontend
   ], // frontend React URL
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"], 
