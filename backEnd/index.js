@@ -24,9 +24,12 @@ app.use(express.json());
 // ✅ Enable CORS so React (5173) can call API
 app.use(
   cors({
-    origin: "https://school-db-yc8e.vercel.app", // frontend React URL
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"], 
+    origin: [
+      "https://school-db-yc8e.vercel.app", // production frontend
+      "http://localhost:5173",             // local dev
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
