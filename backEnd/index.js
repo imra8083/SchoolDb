@@ -22,11 +22,16 @@ await connectDB();
 app.use(express.json());
 
 // ✅ Enable CORS so React (5173) can call API
-app.use(cors({
-  origin: "https://school-db-utu4.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 
 // ✅ Serve images if you store in /uploads
 //app.use("/uploads", express.static("uploads"));
