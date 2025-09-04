@@ -22,16 +22,20 @@ function ShowSchools() {
     fetchSchools();
   }, []);
 
- if (loading) {
-    return (
-      <div className="flex flex-col justify-center items-center h-[80vh]">
-        <div className="animate-spin rounded-full h-14 w-14 border-4 border-t-primary border-gray-300"></div>
-        <p className="mt-4 text-lg font-medium text-gray-600">
-          Loading schools..wait some sec
-        </p>
-      </div>
-    );
- }
+if (loading) {
+  return (
+    <div className="flex flex-col justify-center items-center h-[80vh] text-center">
+      <div className="animate-spin rounded-full h-14 w-14 border-4 border-t-primary border-gray-300"></div>
+      <p className="mt-4 text-lg font-medium text-gray-700">
+        ⏳ Loading schools...
+      </p>
+      <p className="mt-2 text-sm text-gray-500">
+        Please wait a few moments while we fetch the data.
+      </p>
+    </div>
+  );
+}
+
 
   return (
     <div className="p-6 bg-white">
