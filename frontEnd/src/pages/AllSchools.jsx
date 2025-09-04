@@ -27,7 +27,7 @@ function ShowSchools() {
       <div className="flex flex-col justify-center items-center h-[80vh]">
         <div className="animate-spin rounded-full h-14 w-14 border-4 border-t-primary border-gray-300"></div>
         <p className="mt-4 text-lg font-medium text-gray-600">
-          Loading schools...
+          Loading schools..wait some sec
         </p>
       </div>
     );
